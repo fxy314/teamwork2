@@ -98,7 +98,7 @@ string shape::show_type()
 double shape::cut_to_3(double origin)
 {
     long int temp = (long int)(origin * 1000);
-    double output = (double)(temp/1000);
+    double output = (double(temp)/1000);
     return output;
 }
 
