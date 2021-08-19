@@ -1,21 +1,24 @@
-class shape_class
+class shape
 {
-private:
-    int type;
-    /* 用数字代表形状，0代表正方形，1代表长方形，
-    2代表三角形，3代表圆形 */
+protected:
     double area;// 面积
+    const double inch = 2.54;//1 inch = 2.54 cm
 
 public: 
-    shape_class(int type_input);
-    ~shape_class();
+    shape();
+    ~shape();
+    double get_area();
 };
-
-shape_class::shape_class(int type_input)
-{   type = type_input;
+shape::shape()
+{
     area = 0.0; //面积初始化为0
 }
 
-shape_class::~shape_class()
+shape::~shape()
 {
+}
+
+double shape::get_area()
+{
+    return area;
 }
